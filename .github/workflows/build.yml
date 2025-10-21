@@ -27,7 +27,7 @@ jobs:
           ./gradlew build
 
       - name: Generate coverage report
-        working-directory: app
+
         run: make report
 
       - name: Cache SonarQube packages
@@ -45,7 +45,7 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
 
       - name: Build and analyze
-        working-directory: app
+
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./gradlew build sonar --info
