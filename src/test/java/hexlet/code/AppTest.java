@@ -24,7 +24,7 @@ public class AppTest {
     @Test
     void testMain() {
         App.main(null);
-        assertEquals("Hello, World!",
+        assertEquals("Hello, World?",
                 output.toString(StandardCharsets.UTF_8).trim());
     }
 
