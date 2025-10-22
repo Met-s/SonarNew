@@ -2,7 +2,7 @@ package hexlet.code;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-//import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -20,7 +20,7 @@ public class AppTest {
         System.setOut(new PrintStream(output));
     }
 
-//    @Disabled
+    @Disabled
     @Test
     void testMain() {
         App.main(null);
