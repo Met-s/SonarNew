@@ -32,8 +32,11 @@ update-deps:
 build-run: build run
 
 jar:
-	gradle installDist
+	$(GR) installDist
 
 jar-dist: clean-build jar run-dist
+
+report:
+	$(GR) jacocoTestReport
 
 .PHONY: build

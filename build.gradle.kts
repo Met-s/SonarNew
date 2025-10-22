@@ -3,6 +3,8 @@ plugins {
     id("idea")
     id("org.sonarqube") version "7.0.0.6105"
     application
+    checkstyle
+    jacoco
 }
 
 group = "hexlet.code"
@@ -16,18 +18,37 @@ application {
     mainClass.set("hexlet.code.App")
 }
 
+checkstyle {
+    toolVersion = "10.12.4"
+}
+
+jacoco {
+    toolVersion = "0.8.13"
+    reportsDirectory = layout.buildDirectory.dir("customJacocoReportDir")
+}
+
 sonar {
     properties {
         property ("sonar.projectKey", "Met-s_Hexlet")
         property ("sonar.organization", "met-s-1")
+        property("sonar.host.url", "https://sonarcloud.io")
     }
 }
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation("org.junit.platform:junit-platform-console:1.13.1")
+    implementation("org.apache.commons:commons-lang3:3.18.0")
+
+    implementation("info.picocli:picocli:4.7.7")
+    annotationProcessor("info.picocli:picocli-codegen:4.7.7")
 }
 
 tasks.test {
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
 }
+
+tasks.jacocoTestReport { reports { xml.required.set(true) } }
