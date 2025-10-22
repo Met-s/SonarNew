@@ -7,10 +7,10 @@ public class App {
         int a = 10;
         int b = 0;
 
-        while (b < a) {
-            b++;
-            System.out.println(b);
-        }
+//        while (b < a) {
+//            b++;
+//            System.out.println(b);
+//        }
 
 
     }
