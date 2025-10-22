@@ -19,8 +19,11 @@ public class App {
         int b = 0;
         while (b < a) {
             b++;
-            System.out.println(b + result);
+            int c = a + b;
+            System.out.println(c);
+
         }
+
 
 
     }
