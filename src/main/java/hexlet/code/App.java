@@ -14,6 +14,7 @@ public class App {
         String result = first + ", " + second + "?*";
 
         logger.info(result);
+
         logger.info(first);
     }
 }
