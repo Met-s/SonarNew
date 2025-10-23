@@ -18,5 +18,6 @@ public class App {
         logger.info(second);
 
         logger.info(first);
+        logger.info(result);
     }
 }
