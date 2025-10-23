@@ -28,6 +28,9 @@ public class App {
         var rs = st.charAt(3);
         logger.info(String.valueOf(rs));
 
+        var length = st.length();
+        logger.info(String.valueOf(length));
+
 
 
 
