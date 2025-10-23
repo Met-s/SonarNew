@@ -21,8 +21,14 @@ public class App {
             b++;
             int c = a + b;
             System.out.println(c);
-
         }
+
+        String st = "Hello World";
+        logger.info(st);
+        var rs = st.charAt(3);
+        logger.info(String.valueOf(rs));
+
+
 
 
 
