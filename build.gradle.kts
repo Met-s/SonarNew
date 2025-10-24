@@ -29,8 +29,8 @@ jacoco {
 
 sonar {
     properties {
-        property ("sonar.projectKey", "Met-s_Hexlet")
-        property ("sonar.organization", "met-s-1")
+        property ("sonar.projectKey", "Met-s_SonarNew")
+        property ("sonar.organization", "met-s")
         property("sonar.host.url", "https://sonarcloud.io")
     }
 }
